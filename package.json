@@ -1,0 +1,17 @@
+{
+  "name": "notion-json-lens",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "test": "bun test --watch"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "yup": "^1.4.0"
+  }
+}
