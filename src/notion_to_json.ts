@@ -11,17 +11,27 @@ const PropertyTypesHandlers = {
     checkbox: CheckboxConversion,
     url: URLConversion,
     unique_id: UniqueIdConversion,
+    unmapped: GenericConversion,
 };
 
 export function notionToJson(notionObj: NotionObject): PlainJson {
     let res: PlainJson = {};
 
     for (const column in notionObj.properties) {
-        // const sanitizedColumnName = column.replace(/\s/g, "_").toLocaleLowerCase();
+        const type = notionObj.properties[column].type;
+        let handler;
+
         // @ts-ignore
-        res[column] = PropertyTypesHandlers[notionObj.properties[column].type](
-            notionObj.properties[column]
-        );
+        if (PropertyTypesHandlers[type]) {
+            // @ts-ignore
+            handler = PropertyTypesHandlers[type];
+        } else {
+            // @ts-ignore
+            handler = PropertyTypesHandlers["unmapped"];
+        }
+
+        // @ts-ignore
+        res[column] = handler(notionObj.properties[column]);
     }
 
     return res;
@@ -70,4 +80,8 @@ function UniqueIdConversion(value: any) {
     return value.unique_id.prefix
         ? `${value.unique_id.prefix}-${value.unique_id.number}`
         : value.unique_id.number.toString();
+}
+
+function GenericConversion(value: any) {
+    return value[value.type];
 }
