@@ -7,5 +7,5 @@ export interface PlainJson {
 }
 
 export interface NotionTableSchema {
-    [key: string]: string;
+    [key: string]: any;
 }
