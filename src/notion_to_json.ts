@@ -1,4 +1,4 @@
-import { NotionObject, PlainJson } from "./types";
+import { NotionDbProperties, PlainJson } from "./types";
 
 const PropertyTypesHandlers = {
     title: TitleConversion,
@@ -14,7 +14,7 @@ const PropertyTypesHandlers = {
     unmapped: GenericConversion,
 };
 
-export function notionToJson(notionObj: NotionObject): PlainJson {
+export function notionToJson(notionObj: NotionDbProperties): PlainJson {
     let res: PlainJson = {};
 
     for (const column in notionObj.properties) {
