@@ -43,7 +43,7 @@ To get the column's value you need to use `item.properties.column_name.rich_text
 
 Most times you just need a simple path to access an item's properties such as `item.properties.column_name` with no need to worry about the type of that columnm.
 
-This is where this lib enter.
+This is where this library comes in.
 
 # How it works
 

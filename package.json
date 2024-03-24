@@ -4,7 +4,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Bi-directional converter between Notion database properties format and a plain JSON object",
   "git repository": "https://github.com/fuschini/notion-json-lens",
   "keywords": [
