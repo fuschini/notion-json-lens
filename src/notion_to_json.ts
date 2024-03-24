@@ -14,11 +14,11 @@ const PropertyTypesHandlers = {
     unmapped: GenericConversion,
 };
 
-export function notionToJson(notionObj: NotionDbProperties): PlainJson {
+export function notionToJson(properties: NotionDbProperties): PlainJson {
     let res: PlainJson = {};
 
-    for (const column in notionObj.properties) {
-        const type = notionObj.properties[column].type;
+    for (const column in properties) {
+        const type = properties[column].type;
         let handler;
 
         // @ts-ignore
@@ -31,7 +31,7 @@ export function notionToJson(notionObj: NotionDbProperties): PlainJson {
         }
 
         // @ts-ignore
-        res[column] = handler(notionObj.properties[column]);
+        res[column] = handler(properties[column]);
     }
 
     return res;
