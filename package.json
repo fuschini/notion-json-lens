@@ -1,16 +1,20 @@
 {
-  "name": "notion-json-converter",
+  "name": "notion-json-lens",
   "module": "index.ts",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
   "version": "1.0.4",
   "description": "Bi-directional converter between Notion database properties format and a plain JSON object",
-  "git repository": "https://github.com/fuschini/notion-json-lens",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fuschini/notion-json-lens.git"
+  },
   "keywords": [
     "notion",
     "object",
     "json",
+    "lens",
     "database",
     "properties",
     "bi-directional",

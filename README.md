@@ -4,7 +4,7 @@ A bi-directional converter between Notion's DB properties and a simple plain JSO
 
 # Motivation
 
-Notion's type objects definition for a DB items' properties can be tricky to work with. To get the value of any column, you need to know it's type and the object format of that type accordind to the [Type Objects Reference](https://developers.notion.com/reference/page-property-values#type-objects).
+Notion's type objects definition for a DB items' properties can be tricky to work with. To get the value of any column, you need to know it's type and the object format of that type according to the [Type Objects Reference](https://developers.notion.com/reference/page-property-values#type-objects).
 
 For example. A column of type `Text` in a notion DB is represented as:
 
