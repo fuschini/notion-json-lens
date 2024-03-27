@@ -4,7 +4,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Bi-directional converter between Notion database properties format and a plain JSON object",
   "repository": {
     "type": "git",
