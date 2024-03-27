@@ -76,7 +76,7 @@ Transformed types:
 Columns with types not in the list above are returned as-is to preserve information. Support to more types coming in the future...
 
 ```node
-import { notionToJson } from "notion-json-converter";
+import { notionToJson } from "notion-json-lens";
 
 const sampleNotionDbProperties = {
     Title: {
@@ -260,7 +260,7 @@ This side of the lens requires the Notion Table's schema to get the type informa
 
 ```node
 import { Client } from "@notionhq/client"; // standard Notion API client
-import { jsonToNotion } from "notion-json-converter";
+import { jsonToNotion } from "notion-json-lens";
 
 const notion = new Client({ auth: <YOUR NOTION API SECRET> });
 
